@@ -13,8 +13,8 @@ SAVE_PATH = "static/mashup/"
 app.static_folder = 'static'
 
 # Email configuration
-EMAIL_ADDRESS = 'Enter email'  # Update with your email address
-EMAIL_PASSWORD = 'Enter email(APP) password'     # Update with your email password
+EMAIL_ADDRESS = os.environ.get('EMAIL_ADDRESS')
+EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 @app.route("/")
 def index():
